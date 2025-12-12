@@ -1,0 +1,77 @@
+{
+  "cvs": [
+    {
+      "id": "1765404892805",
+      "personalInfo": {
+        "firstName": "florent",
+        "lastName": "juillet",
+        "profession": "archi",
+        "email": "flosl@orange.fr",
+        "phone": "123456",
+        "address": "123456"
+      },
+      "experiences": [
+        {
+          "id": 1765404812770,
+          "company": "icdc",
+          "position": "archi",
+          "startDate": "2025-12-08",
+          "endDate": "",
+          "description": "cool"
+        }
+      ],
+      "educations": [
+        {
+          "id": 1765404812770,
+          "institution": "ESIEE",
+          "degree": "Ingé",
+          "startDate": "2025-12-04",
+          "endDate": ""
+        }
+      ],
+      "skills": [
+        "Javascript"
+      ],
+      "summary": "cool",
+      "createdAt": "2025-12-10T22:14:52.805Z",
+      "updatedAt": "2025-12-11T07:44:46.678Z",
+      "isFavorite": false
+    },
+    {
+      "id": "1765437653279",
+      "personalInfo": {
+        "firstName": "florent2",
+        "lastName": "juillet",
+        "profession": "archi",
+        "email": "flosl@orange.fr",
+        "phone": "123456",
+        "address": "123456"
+      },
+      "experiences": [
+        {
+          "id": 1765437618460,
+          "company": "icdc",
+          "position": "archi",
+          "startDate": "2025-12-08",
+          "endDate": "2025-12-26",
+          "description": ""
+        }
+      ],
+      "educations": [
+        {
+          "id": 1765437618460,
+          "institution": "ESIEE",
+          "degree": "Ingé",
+          "startDate": "2025-12-16",
+          "endDate": ""
+        }
+      ],
+      "skills": [
+        "sdssd"
+      ],
+      "summary": "sddsd",
+      "createdAt": "2025-12-11T07:20:53.279Z",
+      "updatedAt": "2025-12-11T07:20:57.969Z"
+    }
+  ]
+}
