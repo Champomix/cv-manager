@@ -1,77 +1,41 @@
 {
   "cvs": [
     {
-      "id": "1765404892805",
+      "id": "1",
       "personalInfo": {
-        "firstName": "florent",
-        "lastName": "juillet",
-        "profession": "archi",
-        "email": "flosl@orange.fr",
-        "phone": "123456",
-        "address": "123456"
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "profession": "Développeur",
+        "email": "jean.dupont@example.com",
+        "phone": "0123456789",
+        "address": "123 Rue de Paris",
+        "photo": "/api/image/1765559917111-127818313.png"
       },
+      "summary": "Développeur expérimenté avec plus de 5 ans d'expérience",
       "experiences": [
         {
-          "id": 1765404812770,
-          "company": "icdc",
-          "position": "archi",
-          "startDate": "2025-12-08",
-          "endDate": "",
-          "description": "cool"
+          "company": "Entreprise A",
+          "position": "Développeur Full Stack",
+          "startDate": "2020-01-01",
+          "endDate": "2023-01-01",
+          "description": "Développement d'applications web"
         }
       ],
       "educations": [
         {
-          "id": 1765404812770,
-          "institution": "ESIEE",
-          "degree": "Ingé",
-          "startDate": "2025-12-04",
-          "endDate": ""
+          "institution": "Université de Paris",
+          "degree": "Master en Informatique",
+          "startDate": "2016-09-01",
+          "endDate": "2019-06-01"
         }
       ],
       "skills": [
-        "Javascript"
+        "JavaScript",
+        "React",
+        "Node.js"
       ],
-      "summary": "cool",
-      "createdAt": "2025-12-10T22:14:52.805Z",
-      "updatedAt": "2025-12-11T07:44:46.678Z",
-      "isFavorite": false
-    },
-    {
-      "id": "1765437653279",
-      "personalInfo": {
-        "firstName": "florent2",
-        "lastName": "juillet",
-        "profession": "archi",
-        "email": "flosl@orange.fr",
-        "phone": "123456",
-        "address": "123456"
-      },
-      "experiences": [
-        {
-          "id": 1765437618460,
-          "company": "icdc",
-          "position": "archi",
-          "startDate": "2025-12-08",
-          "endDate": "2025-12-26",
-          "description": ""
-        }
-      ],
-      "educations": [
-        {
-          "id": 1765437618460,
-          "institution": "ESIEE",
-          "degree": "Ingé",
-          "startDate": "2025-12-16",
-          "endDate": ""
-        }
-      ],
-      "skills": [
-        "sdssd"
-      ],
-      "summary": "sddsd",
-      "createdAt": "2025-12-11T07:20:53.279Z",
-      "updatedAt": "2025-12-11T07:20:57.969Z"
+      "createdAt": "2025-12-12T16:32:18.086Z",
+      "updatedAt": "2025-12-12T17:18:37.113Z"
     }
   ]
 }
