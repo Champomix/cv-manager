@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Fond du document -->
+  <rect x="5" y="5" width="90" height="90" rx="5" ry="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+
+  <!-- Texte "CV" -->
+  <text x="50" y="55" font-family="Arial" font-size="20" font-weight="bold" fill="#495057" text-anchor="middle" dominant-baseline="middle">CV</text>
+
+  <!-- Ligne pour les sections du CV -->
+  <line x1="10" y1="30" x2="90" y2="30" stroke="#adb5bd" stroke-width="1.5"/>
+  <line x1="10" y1="60" x2="90" y2="60" stroke="#adb5bd" stroke-width="1.5"/>
+
+  <!-- Icône de document -->
+  <path d="M10 10h80v80H10z" stroke="#6c757d" stroke-width="1.5" fill="none"/>
+  <path d="M10 10L20 10L20 20" stroke="#6c757d" stroke-width="1.5" fill="none"/>
+  <path d="M80 10L90 10L90 20" stroke="#6c757d" stroke-width="1.5" fill="none"/>
+  <path d="M10 90L20 90L20 80" stroke="#6c757d" stroke-width="1.5" fill="none"/>
+  <path d="M80 90L90 90L90 80" stroke="#6c757d" stroke-width="1.5" fill="none"/>
+</svg>
