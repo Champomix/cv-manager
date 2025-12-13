@@ -1,0 +1,70 @@
+# .gitignore pour le projet cv-manager (racine)
+
+# datas
+cv-data.json
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environnements de développement (IDE)
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js (si utilisé)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Fichiers de build et cache
+/dist/
+/build/
+/output/
+/coverage/
+*.log
+
+# Fichiers de configuration locaux
+.env
+.env.local
+.env*.local
+*.env
+
+# Fichiers temporaires ou générés
+*.tmp
+*.bak
+*.backup
+*.cache
+
+# Fichiers spécifiques à macOS
+.__MACOSX/
+
+# Fichiers de dépendances Python (si utilisé)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env/
+
+# Fichiers de dépendances Java (si utilisé)
+/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers de données sensibles ou locales
+cv-data.json.local
+*.local.json
+
+# Fichiers de configuration de l'éditeur
+*.sublime-workspace
+*.sublime-project
