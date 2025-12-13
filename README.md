@@ -144,5 +144,15 @@ git push heroku main
 
 ---
 
+## Docker
+## 1. Build des images
+    docker-compose build
+
+## 2. Lancement des conteneurs
+    docker-compose up -d
+
+## 3. Arrêt
+    docker-compose down
+
 ## Licence
 Ce projet est sous licence MIT.

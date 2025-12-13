@@ -48,7 +48,7 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Chemin vers le fichier de données (un niveau au-dessus)
-const DATA_FILE = path.join(__dirname, '../cv-data.json');
+const DATA_FILE = path.join(__dirname, './cv-data.json');
 
 // Stockage des CVs
 let cvsData = {
@@ -109,11 +109,11 @@ const loadData = () => {
         saveData();
       } else {
         cvsData = JSON.parse(fileData);
-        console.log('Données chargées depuis ../cv-data.json');
+        console.log('Données chargées depuis ./cv-data.json');
       }
     } else {
       // Fichier n'existe pas, créer avec données par défaut
-      console.log('Fichier ../cv-data.json introuvable, création avec données par défaut');
+      console.log('Fichier ./cv-data.json introuvable, création avec données par défaut');
       cvsData = getDefaultData();
       saveData();
     }
@@ -137,7 +137,7 @@ const saveData = () => {
 
     // Écrire les données dans le fichier
     fs.writeFileSync(DATA_FILE, JSON.stringify(cvsData, null, 2), 'utf8');
-    console.log('Données sauvegardées dans ../cv-data.json');
+    console.log('Données sauvegardées dans ./cv-data.json');
   } catch (error) {
     console.error('Erreur lors de la sauvegarde des données:', error);
   }

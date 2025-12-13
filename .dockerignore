@@ -1,0 +1,16 @@
+# Frontend
+client/node_modules
+client/.next
+client/.env*
+
+# Backend
+server/node_modules
+
+# Général
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md
+docs/
