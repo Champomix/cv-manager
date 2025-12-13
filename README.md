@@ -15,17 +15,20 @@ Technologies utilisées : React, Next.js, Node.js et Express.
 
 ## Installation
 1. Cloner le dépôt :
-   git clone https://github.com/Champomix/cv-manager.git
-   cd cv-manager
-
+```bash
+git clone https://github.com/Champomix/cv-manager.git
+cd cv-manager
+```
 2. Installer les dépendances du backend :
-   cd server
-   npm install express cors body-parser
-
+```bash
+cd server
+npm install express cors body-parser
+```
 3. Installer les dépendances du frontend :
-   cd ../client
-   npm install axios react-hook-form @hookform/resolvers yup
-
+```bash
+cd ../client
+npm install axios react-hook-form @hookform/resolvers yup
+```
 ---
 
 ## Structure du projet
@@ -39,20 +42,24 @@ Technologies utilisées : React, Next.js, Node.js et Express.
 
 ## Lancement du projet
 1. Démarrer le backend :
-   cd server
-   node index.js
-   (Accès : http://localhost:5000)
+```bash
+cd server
+node index-datafile.js
+```
+(Accès : http://localhost:5000)
 
 2. Démarrer le frontend :
-   cd ../client
-   npm run dev
-   (Accès : http://localhost:3000)
+```bash
+cd ../client
+npm run dev
+```
+(Accès : http://localhost:3000)
 
 ---
 
 ## Structure des données (cv-data.json)
-```json
 Exemple de format :
+```json
 {
   "cvs": [
     {
