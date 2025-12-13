@@ -6,6 +6,18 @@ Technologies utilisées : React, Next.js, Node.js et Express.
 
 ---
 
+## Captures d'écran
+
+### Page d'accueil (Liste des CVs)
+![Liste des CVs](/docs/screenshots/homepage.png)
+*Affichage de tous les CVs avec filtres et recherche.*
+
+### Formulaire de création/édition
+![Formulaire CV](/docs/screenshots/cv-form.png)
+*Interface pour ajouter/modifier les sections d'un CV.*
+
+---
+
 ## Prérequis
 - [Node.js](https://nodejs.org/) (version 16 ou supérieure)
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
