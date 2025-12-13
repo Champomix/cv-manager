@@ -29,11 +29,12 @@ Technologies utilisées : React, Next.js, Node.js et Express.
 ---
 
 ## Structure du projet
+```
 /cv-manager
 ├── client/          # Application Next.js (frontend)
 ├── server/          # API Node.js (backend)
 └── cv-data.json     # Fichier de stockage des CVs (créé automatiquement)
-
+```
 ---
 
 ## Lancement du projet
@@ -50,6 +51,7 @@ Technologies utilisées : React, Next.js, Node.js et Express.
 ---
 
 ## Structure des données (cv-data.json)
+```json
 Exemple de format :
 {
   "cvs": [
@@ -82,6 +84,7 @@ Exemple de format :
     }
   ]
 }
+```
 
 ---
 
