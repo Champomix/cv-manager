@@ -1,4 +1,4 @@
-@startuml cv-manager-applicative-architecture
+@startuml cv-manager-functional-architecture
 title CV Manager – Diagramme d’activité
 
 |Utilisateur|

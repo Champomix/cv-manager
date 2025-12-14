@@ -1,4 +1,4 @@
-@startuml cv-manager-functional-architecture
+@startuml cv-manager-applicative-architecture
 title Architecture Applicative – CV Manager
 
 
