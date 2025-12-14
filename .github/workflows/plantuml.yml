@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '**/*.puml'
+  workflow_dispatch:  # ← Permet de lancer manuellement depuis l'UI
 jobs:
   update-diagrams:
     runs-on: ubuntu-latest
