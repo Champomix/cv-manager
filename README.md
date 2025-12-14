@@ -79,6 +79,8 @@ Ce document décrit les trois niveaux d'architecture du projet **CV Manager** : 
 
 **Objectif :** Représenter les processus métiers et les interactions utilisateur.
 
+![Architecture CV Manager](./docs/diagrams/cv-manager-functional-architecture.png)
+
 ### Acteurs :
 - **Utilisateur** : accède à l'application via un navigateur et effectue des actions sur les CVs.
 
@@ -109,6 +111,8 @@ Ce document décrit les trois niveaux d'architecture du projet **CV Manager** : 
 
 **Objectif :** Montrer l’organisation logique du code et les dépendances entre composants.
 
+![Architecture CV Manager](./docs/diagrams/cv-manager-applicative-architecture.png)
+
 ### Packages principaux :
 
 | Couche        | Description |
@@ -128,6 +132,8 @@ Ce document décrit les trois niveaux d'architecture du projet **CV Manager** : 
 ## 3. Architecture Technique
 
 **Objectif :** Décrire l’infrastructure de déploiement avec conteneurs Docker et volumes persistants.
+
+![Architecture CV Manager](./docs/diagrams/cv-manager-technical-architecture-docker.png)
 
 ### Conteneurs principaux :
 

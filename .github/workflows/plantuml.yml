@@ -19,7 +19,8 @@ jobs:
       - name: Generate diagrams
         run: |
           mkdir -p docs/diagrams
-          docker run --rm -v ${{ github.workspace }}:/data plantuml/plantuml -tpng -o /data/docs/diagrams /data/**/*.puml
+          docker run --rm -v ${{ github.workspace }}:/data plantuml/plantuml:1.2023.10 \
+            -tpng -nbthread 1 -o /data/docs/diagrams /data/**/*.puml
 
       - name: Commit & Push diagrams
         run: |
