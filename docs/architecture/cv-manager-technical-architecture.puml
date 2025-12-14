@@ -3,22 +3,22 @@ title Architecture Technique – CV Manager
 
 
 node "Client" {
-component "Navigateur Web"
+    component "Navigateur Web"
 }
 
 
 node "Frontend" {
-component "Next.js\nPort 3000"
+    component "Next.js\nPort 3000"
 }
 
 
 node "Backend" {
-component "Express.js\nPort 5001"
+    component "Express.js\nPort 5001"
 }
 
 
 node "Stockage" {
-database "cv-data.json"
+    database "cv-data.json"
 }
 
 

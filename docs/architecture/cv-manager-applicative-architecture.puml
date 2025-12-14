@@ -3,32 +3,32 @@ title Architecture Applicative – CV Manager
 
 
 package "Frontend\n(Next.js)" {
-[Components]
-[Pages]
-[Hooks]
-[Services]
-[Styles]
+    [Components]
+    [Pages]
+    [Hooks]
+    [Services]
+    [Styles]
 }
 
 
 package "Backend\n(Node.js / Express)" {
-[Controllers]
-[Routes]
-[Models]
-[Middlewares]
-[Utils]
+    [Controllers]
+    [Routes]
+    [Models]
+    [Middlewares]
+    [Utils]
 }
 
 
 package "Données" {
-[cv-data.json]
+    [cv-data.json]
 }
 
 
 package "Partagé" {
-[Types]
-[Constants]
-[Validation]
+    [Types]
+    [Constants]
+    [Validation]
 }
 
 
