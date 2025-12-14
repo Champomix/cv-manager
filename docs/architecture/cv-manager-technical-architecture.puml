@@ -1,0 +1,29 @@
+@startuml cv-manager-technical-architecture
+title Architecture Technique – CV Manager
+
+
+node "Client" {
+component "Navigateur Web"
+}
+
+
+node "Frontend" {
+component "Next.js\nPort 3000"
+}
+
+
+node "Backend" {
+component "Express.js\nPort 5001"
+}
+
+
+node "Stockage" {
+database "cv-data.json"
+}
+
+
+"Navigateur Web" --> "Next.js\nPort 3000" : HTTPS
+"Next.js\nPort 3000" --> "Express.js\nPort 5001" : API REST
+"Express.js\nPort 5001" --> "cv-data.json" : FS Read/Write
+
+@enduml

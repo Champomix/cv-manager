@@ -1,0 +1,41 @@
+@startuml cv-manager-applicative-architecture
+title Architecture Applicative – CV Manager
+
+
+package "Frontend\n(Next.js)" {
+[Components]
+[Pages]
+[Hooks]
+[Services]
+[Styles]
+}
+
+
+package "Backend\n(Node.js / Express)" {
+[Controllers]
+[Routes]
+[Models]
+[Middlewares]
+[Utils]
+}
+
+
+package "Données" {
+[cv-data.json]
+}
+
+
+package "Partagé" {
+[Types]
+[Constants]
+[Validation]
+}
+
+
+"Frontend\n(Next.js)" --> "Backend\n(Node.js / Express)" : HTTP REST
+"Backend\n(Node.js / Express)" --> "Données" : Read / Write
+"Frontend\n(Next.js)" ..> "Partagé" : Utilise
+"Backend\n(Node.js / Express)" ..> "Partagé" : Utilise
+
+
+@enduml

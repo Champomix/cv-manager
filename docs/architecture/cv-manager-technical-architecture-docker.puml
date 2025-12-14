@@ -1,0 +1,79 @@
+@startuml cv-manager-technical-architecture-docker
+title Architecture Technique - CV Manager\n(Conteneurs Docker, Ports et Volumes)
+
+''left to right direction
+skinparam componentStyle rectangle
+
+'=====================
+' Acteur
+'=====================
+actor Utilisateur
+
+'=====================
+' Client
+'=====================
+node "Poste Client" {
+  component "Navigateur Web" as browser
+}
+
+'=====================
+' Infrastructure Docker
+'=====================
+node "Hôte Docker" {
+
+  frame "Réseau Docker : cv-manager-net" {
+
+    ' Frontend
+    component "Container Frontend\nNext.js" as frontend {
+      port "3000" as f_port
+    }
+
+    ' Backend
+    component "Container Backend\nNode.js / Express" as backend {
+      port "5000" as b_port
+    }
+
+    ' Volume de données
+    database "Volume Docker\ncv-data-volume" as volume
+  }
+}
+
+'=====================
+' Connexions utilisateur
+'=====================
+Utilisateur --> browser : HTTPS
+browser --> f_port : HTTP\nlocalhost:3000
+
+'=====================
+' Connexions inter-conteneurs
+'=====================
+frontend --> b_port : API REST\nHTTP\n(port 5000)
+
+'=====================
+' Accès aux données
+'=====================
+backend --> volume : Lecture / Écriture\nFS
+
+'=====================
+' Mapping des ports (hôte -> conteneur)
+'=====================
+note right of frontend
+  Port mapping:
+  3000:3000
+end note
+
+note right of backend
+  Port mapping:
+  5000:5000
+end note
+
+'=====================
+' Volume Docker
+'=====================
+note bottom of volume
+  Montage:
+  /app/data -> cv-data.json
+  Persistance des CV
+end note
+
+@enduml

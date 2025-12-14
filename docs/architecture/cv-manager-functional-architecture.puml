@@ -1,0 +1,36 @@
+@startuml cv-manager-applicative-architecture
+title CV Manager – Diagramme d’activité
+
+|Utilisateur|
+start
+:Consulter la liste des CV;
+
+|Système|
+:Afficher la liste des CV;
+
+' --- Sous-processus Recherche / Filtre ---
+|Utilisateur|
+:Rechercher / Filtrer des CV;
+
+|Système|
+:Appliquer les critères;
+:Mettre à jour la liste affichée;
+
+|Utilisateur|
+fork
+  :Créer un CV;
+fork again
+  :Mettre à jour un CV;
+fork again
+  :Supprimer un CV;
+end fork
+
+|Système|
+:Traiter l''action demandée;
+:Mettre à jour la liste des CV;
+
+|Utilisateur|
+:Consulter la liste des CV;
+
+stop
+@enduml
