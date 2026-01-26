@@ -1,5 +1,5 @@
 // components/CV/CVListPage.js
-import { useState, useEffect, useMemo } from 'react';
+import {useState, useEffect, useMemo} from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import {
@@ -17,7 +17,7 @@ export default function CVListPage() {
 
     const api = axios.create({
         baseURL: 'http://localhost:5001/api',
-        headers: { 'Content-Type': 'application/json' }
+        headers: {'Content-Type': 'application/json'}
     });
 
     // ---------------------------
@@ -33,6 +33,7 @@ export default function CVListPage() {
                 setLoading(false);
             }
         }
+
         fetchCVs();
     }, []);
 
@@ -54,10 +55,10 @@ export default function CVListPage() {
         const cv = cvs.find(cv => cv.id === id);
         if (!cv) return;
 
-        const updated = { ...cv, isFavorite: !cv.isFavorite };
+        const updated = {...cv, isFavorite: !cv.isFavorite};
 
         try {
-            await api.put(`/cv/${id}`, updated);
+            await api.put(`/cv/${id}`, {cvData: JSON.stringify(updated)});
             setCvs(prev => prev.map(item => item.id === id ? updated : item));
         } catch (err) {
             console.error(err);
@@ -93,7 +94,8 @@ export default function CVListPage() {
             <div className="mb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 {/* Search bar moderne */}
                 <div className="relative w-full md:w-1/2">
-                    <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg pointer-events-none" />
+                    <FiSearch
+                        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg pointer-events-none"/>
                     <input
                         type="text"
                         placeholder="Rechercher un CV..."
@@ -121,7 +123,7 @@ export default function CVListPage() {
                             leading-tight
                             box-border
                         "
-                        style={{ paddingLeft: '1rem' }}
+                        style={{paddingLeft: '1rem'}}
                         aria-label="Recherche de CV"
                     />
                 </div>
@@ -136,12 +138,12 @@ export default function CVListPage() {
                             flex items-center gap-2 px-5 py-3 rounded-xl transition-all
                             shadow-sm border
                             ${filterFavorite
-                                ? "bg-blue-600 border-blue-700 text-white hover:bg-blue-700"
-                                : "bg-white border-gray-200 hover:bg-gray-50"
-                            }
+                            ? "bg-blue-600 border-blue-700 text-white hover:bg-blue-700"
+                            : "bg-white border-gray-200 hover:bg-gray-50"
+                        }
                         `}
                     >
-                        <FiStar className={`text-lg ${filterFavorite ? "text-yellow-300" : "text-gray-400"}`} />
+                        <FiStar className={`text-lg ${filterFavorite ? "text-yellow-300" : "text-gray-400"}`}/>
                         {filterFavorite ? "Masquer les favoris" : "Afficher uniquement les favoris"}
                     </button>
 
@@ -156,7 +158,7 @@ export default function CVListPage() {
                             transition-all
                         "
                     >
-                        <FiPlus className="text-lg" />
+                        <FiPlus className="text-lg"/>
                         Créer un nouveau CV
                     </Link>
                 </div>
@@ -165,7 +167,8 @@ export default function CVListPage() {
             {/* Loading */}
             {loading && (
                 <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
+                    <div
+                        className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto"></div>
                     <p className="mt-4">Chargement des CVs...</p>
                 </div>
             )}
@@ -173,7 +176,7 @@ export default function CVListPage() {
             {/* AUCUN CV */}
             {!loading && filteredCVs.length === 0 && (
                 <div className="text-center py-12">
-                    <FiBookOpen className="text-4xl mb-4 text-blue-200 mx-auto" />
+                    <FiBookOpen className="text-4xl mb-4 text-blue-200 mx-auto"/>
                     <p className="text-xl mb-4">Aucun CV trouvé</p>
 
                     {searchTerm || filterFavorite ? (
@@ -211,16 +214,16 @@ export default function CVListPage() {
                                     href={`/cv/${cv.id}`}
                                     className={`${styles.actionBtn} ${styles.editBtn}`}
                                 >
-                                    <FiEdit /> Modifier
+                                    <FiEdit/> Modifier
                                 </Link>
                             </div>
 
                             <button
                                 onClick={() => handleToggleFavorite(cv.id)}
                                 className={`${styles.favoriteBtn} ${cv.isFavorite ? styles.favorited : styles.notFavorited
-                                    }`}
+                                }`}
                             >
-                                <FiStar />
+                                <FiStar/>
                             </button>
 
                             <div className={styles.cardContent}>
@@ -246,7 +249,7 @@ export default function CVListPage() {
                                     onClick={() => handleDelete(cv.id)}
                                     className="flex items-center gap-2 text-red-500 hover:text-red-700"
                                 >
-                                    <FiTrash2 /> Supprimer
+                                    <FiTrash2/> Supprimer
                                 </button>
                             </div>
                         </div>
