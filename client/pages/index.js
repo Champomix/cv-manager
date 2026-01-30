@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     router.replace('/cv');
-  }, []);
+  }, [router]);
 
   return null; // ou un loader pendant la redirection
 }

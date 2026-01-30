@@ -30,7 +30,7 @@ node "Hôte Docker" {
 
     ' Backend
     component "Container Backend\nNode.js / Express" as backend {
-      port "5000" as b_port
+      port "5001" as b_port
     }
 
     ' Volume de données
@@ -47,7 +47,7 @@ browser --> f_port : HTTP\nlocalhost:3000
 '=====================
 ' Connexions inter-conteneurs
 '=====================
-frontend --> b_port : API REST\nHTTP\n(port 5000)
+frontend --> b_port : API REST\nHTTP\n(port 5001)
 
 '=====================
 ' Accès aux données
@@ -64,7 +64,7 @@ end note
 
 note right of backend
   Port mapping:
-  5000:5000
+  5001:5001
 end note
 
 '=====================
