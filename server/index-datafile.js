@@ -5,6 +5,8 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 
+const { generateCvPdf } = require('./pdf/cvPdf.service');
+
 const app = express();
 const PORT = 5001;
 
@@ -364,6 +366,29 @@ app.get('/api/image/:filename', (req, res) => {
   }
 });
 
+// export un cv en pdf
+app.get('/api/cv/:id/export/pdf', async (req, res) => {
+  try {
+    const cv = cvsData.cvs.find(cv => cv.id === req.params.id);
+
+    if (!cv) {
+      return res.status(404).json({ error: 'CV non trouvé' });
+    }
+
+    const pdfBuffer = await generateCvPdf(cv);
+
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename=cv-${cv.personalInfo.lastName}.pdf`
+    );
+
+    res.send(pdfBuffer);
+  } catch (error) {
+    console.error('Erreur export PDF:', error);
+    res.status(500).json({ error: 'Erreur lors de la génération du PDF' });
+  }
+});
 
 // Démarrer le serveur
 app.listen(PORT, () => {

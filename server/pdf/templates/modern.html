@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    {{STYLE}}
+  </style>
+</head>
+<body>
+  <div class="cv">
+    <aside class="left">
+      {{PHOTO}}
+      <h2>{{FULLNAME}}</h2>
+
+      <div class="block">
+        <p>{{EMAIL}}</p>
+        <p>{{PHONE}}</p>
+        <p>{{ADDRESS}}</p>
+      </div>
+
+      <div class="block">
+        <h3>Compétences</h3>
+        <ul>{{SKILLS}}</ul>
+      </div>
+    </aside>
+
+    <main class="right">
+      <h1>{{PROFESSION}}</h1>
+      <p class="summary">{{SUMMARY}}</p>
+
+      <section>
+        <h3>Expériences</h3>
+        {{EXPERIENCES}}
+      </section>
+
+      <section>
+        <h3>Formations</h3>
+        {{EDUCATIONS}}
+      </section>
+    </main>
+  </div>
+</body>
+</html>

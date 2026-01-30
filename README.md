@@ -34,7 +34,7 @@ cd cv-manager
 2. Installer les dépendances du backend :
 ```bash
 cd server
-npm install express cors body-parser
+npm install express cors body-parser puppeteer
 ```
 3. Installer les dépendances du frontend :
 ```bash
@@ -137,11 +137,11 @@ Ce document décrit les trois niveaux d'architecture du projet **CV Manager** : 
 
 ### Conteneurs principaux :
 
-| Composant           | Image Docker       | Ports  | Description |
-|--------------------|-----------------|--------|------------|
-| **Frontend**        | node:16          | 3000   | Application Next.js. Serveur web côté client. |
-| **Backend**         | node:16          | 5001   | API Express.js. Traite les requêtes HTTP et accède au stockage des CVs. |
-| **Volume Docker**   | -                | -      | Persistance des fichiers JSON de données. |
+| Composant           | Image Docker       | Ports  | Description                                                             |
+|---------------------|--------------------|--------|-------------------------------------------------------------------------|
+| **Frontend**        | node:16            | 3000   | Application Next.js. Serveur web côté client.                           |
+| **Backend**         | node:16            | 5001   | API Express.js. Traite les requêtes HTTP et accède au stockage des CVs. |
+| **Volume Docker**   | -                  | -      | Persistance des fichiers JSON de données.                               |
 
 ### Mapping des ports :
 - Navigateur → Frontend : HTTPS (port 3000)
