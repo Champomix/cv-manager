@@ -148,47 +148,6 @@ const saveData = () => {
 // Initialiser les données
 loadData();
 
-// Helper pour initialiser les données
-const initializeData = () => {
-  cvsData = {
-    cvs: [
-      {
-        id: '1',
-        personalInfo: {
-          firstName: 'Jean',
-          lastName: 'Dupont',
-          profession: 'Développeur',
-          email: 'jean.dupont@example.com',
-          phone: '0123456789',
-          address: '123 Rue de Paris',
-          photo: null
-        },
-        summary: 'Développeur expérimenté avec plus de 5 ans d\'expérience',
-        experiences: [
-          {
-            company: 'Entreprise A',
-            position: 'Développeur Full Stack',
-            startDate: '2020-01-01',
-            endDate: '2023-01-01',
-            description: 'Développement d\'applications web'
-          }
-        ],
-        educations: [
-          {
-            institution: 'Université de Paris',
-            degree: 'Master en Informatique',
-            startDate: '2016-09-01',
-            endDate: '2019-06-01'
-          }
-        ],
-        skills: ['JavaScript', 'React', 'Node.js'],
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
-      }
-    ]
-  };
-};
-
 // Initialiser les données
 loadData();
 
@@ -207,7 +166,6 @@ const deletePhotoIfExists = (photoPath) => {
 };
 
 // Routes API
-// (Les routes restent identiques, seule la gestion du fichier de données change)
 
 // Créer un nouveau CV
 app.post('/api/cv', upload.single('photo'), (req, res) => {
@@ -284,6 +242,9 @@ app.get('/api/cv/:id', (req, res) => {
 app.get('/api/cvs', (req, res) => {
   try {
     res.json(cvsData.cvs);
+
+      console.log(`J'ai appeler la liste des cv ici ... il y a ${cvsData.cvs.length} cv dans la base !!`);
+
   } catch (error) {
     res.status(500).json({ error: 'Erreur lors de la lecture des CVs' });
   }

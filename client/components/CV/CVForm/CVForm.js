@@ -80,10 +80,7 @@ const schema = yup.object().shape({
                         if (file.size > 5 * 1024 * 1024) {
                             return false;
                         }
-                        if (!['image/jpeg', 'image/png'].includes(file.type)) {
-                            return false;
-                        }
-                        return true;
+                        return ['image/jpeg', 'image/png'].includes(file.type);
                     }
 
                     // Cas par défaut (ne devrait normalement pas arriver)
@@ -191,7 +188,7 @@ const schema = yup.object().shape({
 export default function CVForm({cv, onSubmit}) {
     const [photoPreview, setPhotoPreview] = useState(null);
 
-    const {register, handleSubmit, control, formState: {errors}, setValue, watch, reset} = useForm({
+    const {register, handleSubmit, control, formState: {errors}, setValue, watch} = useForm({
         resolver: yupResolver(schema),
         defaultValues: {
             personalInfo: {
@@ -266,7 +263,7 @@ export default function CVForm({cv, onSubmit}) {
                 URL.revokeObjectURL(photoPreview);
             }
         };
-    }, [photo, photoPreview]);
+    }, [photo]);
 
     const handlePhotoChange = (e) => {
         if (e.target.files && e.target.files[0]) {
